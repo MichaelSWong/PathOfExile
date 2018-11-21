@@ -5,21 +5,27 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PathOfExile.Models;
+using PathOfExile.DAL;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Http;
 
 namespace PathOfExile.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        [HttpGet]
+        public ActionResult Index()
         {
-            return View();
+            CharacterSqlDAL dal = new CharacterSqlDAL();
+            return View(dal.GetAllClasses());
         }
 
-        public IActionResult About()
+        public ActionResult Detail(int id)
         {
-            ViewData["Message"] = "Your application description page.";
+            CharacterSqlDAL dal = new CharacterSqlDAL();
+            CharacterModel character = dal.GetCharacter(id);
 
-            return View();
+            return View(character);
         }
 
         public IActionResult Contact()

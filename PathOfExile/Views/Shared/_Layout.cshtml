@@ -17,22 +17,26 @@
     </environment>
 </head>
 <body>
-
-    <header>
-        <img src="~/images/render_full.png" alt="Path of Exile logo" />
-        <h1>Path of Exile</h1>
-        <p> Path of Exile is a free-to-play action role-playing video game developed and published by Grinding Gear Games. Released in October 2013 </p>
-    </header>
-    <nav>
-        <h2>Explore Path of Exile</h2>
-        <p> Use these links to learn more about Path of Exile </p>
-        <ul>
-            <li><a asp-action="AlienWeight" asp-controller="Calculators">Alien Weight</a></li>
-            <li><a asp-action="AlienAge" asp-controller="Calculators">Alien Age</a></li>
-            <li><a asp-action="AlienTravel" asp-controller="Calculators">Alien Travel Time</a></li>
-            <li><a asp-action="Index" asp-controller="Forum">Space Forum</a></li>
-
-        </ul>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Path Of Exile</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="NewSurvey">Survey</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Currency">Currency</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Tips">Tips</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     @RenderBody()
