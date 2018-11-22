@@ -17,10 +17,10 @@ namespace PathOfExile.Controllers
         public ActionResult Index()
         {
             CharacterSqlDAL dal = new CharacterSqlDAL();
-            return View(dal.GetAllClasses());
+            return View(dal.GetAllCharacters());
         }
 
-        public ActionResult Detail(int id)
+        public IActionResult Detail(int id)
         {
             CharacterSqlDAL dal = new CharacterSqlDAL();
             CharacterModel character = dal.GetCharacter(id);
@@ -28,11 +28,11 @@ namespace PathOfExile.Controllers
             return View(character);
         }
 
-        public IActionResult Contact()
+        public IActionResult CurrencyView()
         {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            CurrencySqlDAL dal = new CurrencySqlDAL();
+            
+            return View(dal.GetAllCurrency());
         }
 
         public IActionResult Privacy()

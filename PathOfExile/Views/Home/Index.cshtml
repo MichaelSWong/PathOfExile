@@ -9,14 +9,25 @@
     @foreach (CharacterModel character in Model)
     {
         string imageName = character.Classes_Name + "_avatar.png";
+        string ascendantName = character.Ascendancy_Name + "_avatar.png";
 
-        <h3><a href="~/home/detail?id=@character.Classes_Name">@character.Classes_Name</a></h3>
-        <h3><a href="~/home/detail?id=@character.Classes_Name"><img id="images" src="~/images/@imageName" /></a></h3>
+        <h3><a href="~/home/detail?id=@character.Classes_Id">@character.Classes_Name</a></h3>
+        <h3><a data-toggle="collapse" data-target="#@character.Classes_Id">@character.Classes_Name</a></h3>
+        <h3><a href="~/home/detail?id=@character.Classes_Id"><img id="images" src="~/images/@imageName" /></a></h3>
         <div class="second">
             <h5>Starting Dex: @character.Starting_Dex</h5>
             <h5>Starting Int: @character.Starting_Int</h5>
             <h5>Starting Str: @character.Starting_Str</h5>
         </div>
+        <div id="@character.Classes_Id" class="collapse">
+            <partial name="DetailPartial" model="@Model" />        
+    @*@character.Ascendancy_Name
+            <img src="~/images/@ascendantName" />*@
+
+
+
+        </div>
         <hr />
+
     }
 </div>

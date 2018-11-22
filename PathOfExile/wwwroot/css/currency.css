@@ -1,0 +1,12 @@
+﻿body {
+    color:white;
+}
+
+.logo {
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 0px;
+}

@@ -1,0 +1,17 @@
+﻿@model IList<CharacterModel>
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="wrapper">
+    @foreach (CharacterModel character in Model)
+    {
+        if (character.Classes_Id <= 3)
+        {
+            string ascendant = character.Ascendancy_Name + "_avatar.png";
+            <h5>@character.Ascendancy_Name</h5>
+            <img id="images" src="~/images/@ascendant" />
+        }
+
+
+    }
+</div>

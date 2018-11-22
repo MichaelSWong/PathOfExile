@@ -1,0 +1,18 @@
+﻿<link rel="stylesheet" href="~/css/detail.css" />
+@{
+    ViewData["Title"] = "Detail";
+}
+@model CharacterModel
+<img class="logo" src="~/images/render_full.png" />
+<hr />
+<div class="text">
+    @{string imageName = Model.Classes_Name + "_avatar.png";
+        string ascendantName = Model.Ascendancy_Name + "_avatar.png";
+        <img id="images" src="~/images/@imageName" />
+        <h3>@Model.Classes_Name</h3>
+        
+        <partial name="DetailPartial" model="@Model" />
+
+    }
+
+</div>

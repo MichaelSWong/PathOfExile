@@ -1,7 +1,19 @@
-﻿
+﻿<link rel="stylesheet" href="~/css/currency.css" />
 @{
     ViewData["Title"] = "CurrencyView";
 }
+@model IList<CurrencyModel>
+<img class="logo" src="~/images/render_full.png" />
+<div class="wrapper">
+    @foreach (CurrencyModel currency in Model)
+    {
+        string imageName = currency.Currency_Name + "_icon.png";
+        <img id="images" src="~/images/@imageName" />
 
-<h2>CurrencyView</h2>
+        <h4>Currency Name: @currency.Currency_Name</h4>
+        
+        <h4>Currency Description: @currency.Description_Text</h4>
+        <hr />
+    }
+</div>
 

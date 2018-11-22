@@ -10,6 +10,7 @@ namespace PathOfExile.DAL
     {
         List<CharacterModel> GetAllCharacters();
 
+        CharacterModel GetCharacter(string name);
 
     }
 }
