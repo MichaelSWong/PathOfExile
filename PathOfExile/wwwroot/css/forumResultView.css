@@ -1,0 +1,30 @@
+﻿#header {
+    text-align: center;
+}
+
+#button {
+    padding-left: 200px;
+}
+.logo {
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 0px;
+}
+.centered{
+    text-align:center;
+}
+.box1{
+    margin-right:8px;
+}
+.box2{
+    margin-right:27px;
+}
+.box3{
+    margin-right:18px;
+}
+.bold{
+    font-weight:bold;
+}

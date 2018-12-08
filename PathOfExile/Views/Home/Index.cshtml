@@ -6,13 +6,14 @@
 
 <img class="logo" src="~/images/render_full.png" />
 <div class="wrapper">
+    <h2>Starting Classes</h2>
     @foreach (CharacterModel character in Model)
     {
         string imageName = character.Classes_Name + "_avatar.png";
         string ascendantName = character.Ascendancy_Name + "_avatar.png";
 
-        <h3><a href="~/home/detail?id=@character.Classes_Id">@character.Classes_Name</a></h3>
-        <h3><a data-toggle="collapse" data-target="#@character.Classes_Id">@character.Classes_Name</a></h3>
+        <h3>@*@<a href="~/home/detail?id=@character.Classes_Id">@character.Classes_Name</a>*@@character.Classes_Name</h3>
+        @*@<h3><a data-toggle="collapse" data-target="#@character.Classes_Id">@character.Classes_Name</a></h3>*@
         <h3><a href="~/home/detail?id=@character.Classes_Id"><img id="images" src="~/images/@imageName" /></a></h3>
         <div class="second">
             <h5>Starting Dex: @character.Starting_Dex</h5>
@@ -20,7 +21,7 @@
             <h5>Starting Str: @character.Starting_Str</h5>
         </div>
         <div id="@character.Classes_Id" class="collapse">
-            <partial name="DetailPartial" model="@Model" />        
+            @*@<partial name="DetailPartial" model="@Model" />       *@ 
     @*@character.Ascendancy_Name
             <img src="~/images/@ascendantName" />*@
 

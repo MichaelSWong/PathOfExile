@@ -40,9 +40,32 @@ namespace PathOfExile.Controllers
             return View();
         }
 
-        public ActionResult Tips()
+        public IActionResult Tips()
+        {
+            
+            return View();
+        }
+
+        public IActionResult ForumView()
+        {
+            ForumPostSqlDAL myDal = new ForumPostSqlDAL();
+
+            return View(myDal.GetAllPosts());
+        }
+
+        [HttpGet]
+        public IActionResult ForumResultView()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult ForumResultView(ForumPostModel model)
+        {
+            ForumPostSqlDAL myDal = new ForumPostSqlDAL();
+            myDal.SaveNewPost(model);
+
+            return RedirectToAction("forumview");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

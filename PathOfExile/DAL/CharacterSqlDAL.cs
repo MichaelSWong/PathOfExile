@@ -15,7 +15,7 @@ namespace PathOfExile.DAL
         {
             List<CharacterModel> output = new List<CharacterModel>();
 
-            string SQL_GetCommand = "SELECT * FROM Classes JOIN Ascendancy ON Ascendancy.classes_id=Classes.classes_id";
+            string SQL_GetCommand = "SELECT * FROM Classes";// JOIN Ascendancy ON Ascendancy.classes_id=Classes.classes_id";
 
 
             using (SqlConnection myConnection = new SqlConnection(connectionString))
@@ -38,9 +38,9 @@ namespace PathOfExile.DAL
                             Starting_Dex = Convert.ToInt32(myReader["starting_dex"]),
                             Starting_Int = Convert.ToInt32(myReader["starting_int"]),
                             Classes_Image = Convert.ToString(myReader["classes_image"]),
-                            Ascendancy_Id = Convert.ToInt32(myReader["ascendancy_id"]),
-                            Ascendancy_Name = Convert.ToString(myReader["ascendancy_name"]),
-                            Ascendancy_Image = Convert.ToString(myReader["ascendancy_image"])
+                            //Ascendancy_Id = Convert.ToInt32(myReader["ascendancy_id"]),
+                            //Ascendancy_Name = Convert.ToString(myReader["ascendancy_name"]),
+                            //Ascendancy_Image = Convert.ToString(myReader["ascendancy_image"])
                         };
                         output.Add(temp);
                     }

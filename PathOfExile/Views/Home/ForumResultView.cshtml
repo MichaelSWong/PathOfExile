@@ -1,7 +1,25 @@
-﻿
+﻿<link rel="stylesheet" href="~/css/forumResultView.css" />
 @{
     ViewData["Title"] = "ForumResultView";
 }
-
-<h2>ForumResultView</h2>
+@model ForumPostModel
+<img class="logo" src="~/images/render_full.png" />
+<h2 id="header">ForumResultView</h2>
+<form asp-controller="Home" asp-action="ForumResultView" method="post">
+    <div>
+        <label class="box1" asp-for="UserName">UserName</label>
+        <input type="text" asp-for="UserName" />
+    </div>
+    <div>
+        <label class="box2" asp-for="Subject">Subject </label>
+        <input type="text" asp-for="Subject" />
+    </div>
+    <div>
+        <label class="box3" asp-for="Message">Message</label>
+        <input type="text" asp-for="Message" />
+    </div>
+    <div id="button">
+    <input type="submit" value="Submit" />
+    </div>
+</form>
 

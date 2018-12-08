@@ -9,5 +9,7 @@ namespace PathOfExile.DAL
     public interface ICurrencySqlDAL
     {
         List<CurrencyModel> GetAllCurrency();
+
+        CurrencyModel GetCurrency(string name);
     }
 }

@@ -16,5 +16,7 @@ namespace PathOfExile.Models
         public string Description_Text { get; set; }
 
         public string Currency_Image { get; set; }
+
+        public string Trade_Description { get; set; }
     }
 }

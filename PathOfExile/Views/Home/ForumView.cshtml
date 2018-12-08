@@ -1,7 +1,33 @@
-﻿
+﻿<link rel="stylesheet" href="~/css/forumResultView.css" />
 @{
     ViewData["Title"] = "ForumView";
 }
-
+<img class="logo" src="~/images/render_full.png" />
 <h2>ForumView</h2>
+<div class="centered"><a asp-controller="home" asp-action="forumresultview">Post a Message</a></div>
+@{ 
+
+    bool EvenNumberedPost = false;
+    string backgroundColor = "white";
+    foreach(var entry in Model)
+    {
+        if (EvenNumberedPost)
+        {
+            backgroundColor = "lightgrey";
+        }
+        else
+        {
+            backgroundColor = "white";
+        }
+        <div style="background-color:@backgroundColor">
+            <div class="bold">@entry.Subject</div>
+            <p>by @entry.UserName on @entry.PostDate</p>
+            <p>@entry.Message</p>
+
+        </div>
+        EvenNumberedPost = !EvenNumberedPost;
+    }
+
+
+}
 

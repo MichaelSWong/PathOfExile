@@ -35,7 +35,8 @@ namespace PathOfExile.DAL
                             Currency_Name = Convert.ToString(myReader["currency_name"]),
                             Stack_Size = Convert.ToInt32(myReader["stack_size"]),
                             Description_Text = Convert.ToString(myReader["description_text"]),
-                            Currency_Image = Convert.ToString(myReader["currency_image"]),                            
+                            Currency_Image = Convert.ToString(myReader["currency_image"]),
+                            Trade_Description = Convert.ToString(myReader["trade_description"]),
                         };
                         output.Add(temp);
                     }
@@ -48,6 +49,11 @@ namespace PathOfExile.DAL
             }
 
             return output;
+        }
+
+        public CurrencyModel GetCurrency(int id)
+        {
+            return GetAllCurrency().FirstOrDefault(c => c.Currency_Id == id);
         }
     }
 }
