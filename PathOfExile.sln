@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathOfExile", "PathOfExile\PathOfExile.csproj", "{37CA0A7E-BF82-43B5-B1E9-F29726FB45CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathOfExile", "PathOfExile\PathOfExile.csproj", "{37CA0A7E-BF82-43B5-B1E9-F29726FB45CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathOfExile.Tests", "PathOfExile.Tests\PathOfExile.Tests.csproj", "{0E984E78-433D-4BCE-98FC-1E9BF903F97C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{37CA0A7E-BF82-43B5-B1E9-F29726FB45CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37CA0A7E-BF82-43B5-B1E9-F29726FB45CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37CA0A7E-BF82-43B5-B1E9-F29726FB45CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E984E78-433D-4BCE-98FC-1E9BF903F97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E984E78-433D-4BCE-98FC-1E9BF903F97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E984E78-433D-4BCE-98FC-1E9BF903F97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E984E78-433D-4BCE-98FC-1E9BF903F97C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
